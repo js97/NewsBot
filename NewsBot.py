@@ -28,7 +28,7 @@ def main():
 	DayOfWeek = datetime.datetime.today().weekday()
 	print('Waiting...\n')
 	time.sleep(1)
-	#if DayOfWeek == 6:
+	#if DayOfWeek == 6: #comment out for now, uncomment when working build is ready
 	getSubmissions()
 	
 if __name__ == '__main__':
