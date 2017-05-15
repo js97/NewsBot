@@ -31,31 +31,39 @@ def getSubmissions():
 def prompt(prompt):
     return input(prompt).strip()
 
-def sendEmail(msg, sub_list):
-	server = smtplib.SMTP('smtp.gmail.com', 587)
-	server.starttls()
+def createFile:
+
+
+def sendEmail(sub_list):
+	
+	createFile()
+	with open('file.txt') as fp:
+		msg = MIMEText(fp.read())
+
 	email = ''
 	password = ''
+
+	msg['Subject'] = 'The contents'
+	msg['From'] = 'email'
+	msg['To'] = 'email'
+	msg_ = msg.as_string()
+
+	server = smtplib.SMTP('smtp.gmail.com', 587)
+	server.starttls()
+	
 	server.login(email,password)
 	server.set_debuglevel(1)
-	server.sendmail(email,email, msg)
+	server.sendmail(email,email, msg_)
 	server.quit()	
 
 def main():
 	
 	DayOfWeek = datetime.datetime.today().weekday()
 	print('Waiting...\n')
-	time.sleep(1)
+	#time.sleep(1)
 	#if DayOfWeek == 6:
-	with open('file.txt') as fp:
-		msg = MIMEText(fp.read())
-	email = ''
-	msg['Subject'] = 'The contents'
-	msg['From'] = 'email'
-	msg['To'] = 'email'
-
-	sendEmail(msg, getSubmissions())
+	sendEmail(getSubmissions())
 	
 if __name__ == '__main__':
-	while 1:
-		main()
+	#while 1:
+	main()
