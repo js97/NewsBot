@@ -31,19 +31,27 @@ def getSubmissions():
 def prompt(prompt):
     return input(prompt).strip()
 
-def createFile:
+def createFile(sub_list):
+	with open('file.txt','w') as f:
+		while len(sub_list) is not 0:
+			subreddit = sub_list.pop()
+			f.write(subreddit)
+			for submission in subreddit.top('week',limit=2):
+				f.write(submission.title)
+				f.write('\n')
+
 
 
 def sendEmail(sub_list):
 	
-	createFile()
-	with open('file.txt') as fp:
-		msg = MIMEText(fp.read())
+	createFile(sub_list)
+	with open('file.txt') as f:
+		msg = MIMEText(f.read())
 
 	email = ''
 	password = ''
 
-	msg['Subject'] = 'The contents'
+	msg['Subject'] = 'Reddit Weekly Update'
 	msg['From'] = 'email'
 	msg['To'] = 'email'
 	msg_ = msg.as_string()
