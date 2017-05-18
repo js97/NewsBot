@@ -18,8 +18,6 @@ def getSubmissions():
 	subs.append('chomsky')
 	subs.append(reddit_instance.subreddit('programming'))
 	subs.append('programming')
-	subs.append(reddit_instance.subreddit('rust'))
-	subs.append('rust')
 	subs.append(reddit_instance.subreddit('python'))
 	subs.append('python')
 	subs.append(reddit_instance.subreddit('machinelearning'))
@@ -33,10 +31,9 @@ def createFile(sub_list):
 		while len(sub_list) is not 0:
 			f.write('/r/')
 			f.write(sub_list.pop())
-			f.write('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
+			f.write('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
 			f.write('\n')
-			for submission in sub_list.pop().top('week',limit=2):
-				#f.write('\t')
+			for submission in sub_list.pop().top('week',limit=3):
 				f.write(submission.title)
 				f.write('\n')
 				f.write(submission.url)
@@ -71,10 +68,9 @@ def main():
 	
 	DayOfWeek = datetime.datetime.today().weekday()
 	print('Waiting...\n')
-	#time.sleep(1)
-	#if DayOfWeek == 6:
-	sendEmail(getSubmissions())
+	if DayOfWeek == 6:
+		sendEmail(getSubmissions())
 	
 if __name__ == '__main__':
-	#while 1:
-	main()
+	while 1:
+		main()
