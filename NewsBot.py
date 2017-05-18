@@ -5,41 +5,44 @@ import datetime
 import smtplib
 from email.mime.text import MIMEText
 
-
 def getSubmissions():
 
 	reddit_instance = praw.Reddit('bot1')
 
 	subs = []
-	subs.append(reddit_instance.subreddit('news'))
-	subs.append(reddit_instance.subreddit('economics'))
-	subs.append(reddit_instance.subreddit('chomsky'))
-	subs.append(reddit_instance.subreddit('programming'))
-	subs.append(reddit_instance.subreddit('rust'))
-	subs.append(reddit_instance.subreddit('python'))
-	subs.append(reddit_instance.subreddit('machinelearning'))
 	subs.append(reddit_instance.subreddit('cpp'))
-
-	#size = len(subs)
-	#count = 0
-	#for x in range(0,size):
-	#	sub = subs.pop()
-	#	for submission in sub.top('week',limit=2):
-	#		print('\nADD: ', submission.title)
+	subs.append('cpp')
+	subs.append(reddit_instance.subreddit('economics'))
+	subs.append('economics')
+	subs.append(reddit_instance.subreddit('chomsky'))
+	subs.append('chomsky')
+	subs.append(reddit_instance.subreddit('programming'))
+	subs.append('programming')
+	subs.append(reddit_instance.subreddit('rust'))
+	subs.append('rust')
+	subs.append(reddit_instance.subreddit('python'))
+	subs.append('python')
+	subs.append(reddit_instance.subreddit('machinelearning'))
+	subs.append('machinelearning')
+	subs.append(reddit_instance.subreddit('news'))
+	subs.append('news')
 	return subs
-	
-def prompt(prompt):
-    return input(prompt).strip()
 
 def createFile(sub_list):
 	with open('file.txt','w') as f:
 		while len(sub_list) is not 0:
-			subreddit = sub_list.pop()
-			f.write(subreddit)
-			for submission in subreddit.top('week',limit=2):
+			f.write('/r/')
+			f.write(sub_list.pop())
+			f.write('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
+			f.write('\n')
+			for submission in sub_list.pop().top('week',limit=2):
+				#f.write('\t')
 				f.write(submission.title)
 				f.write('\n')
+				f.write(submission.url)
+				f.write('\n')
 
+			f.write('\n')
 
 
 def sendEmail(sub_list):

@@ -1,0 +1,48 @@
+/r/cpp-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+simdb.hpp <2k lines and 70KB - A high performance, shared memory, lock free, cross platform, single file, no dependencies, C++11 key-value store for thread and inter-process communication (Apache 2)
+https://www.reddit.com/r/cpp/comments/6b44jx/simdbhpp_2k_lines_and_70kb_a_high_performance/
+AMD Releases Optimizing C/C++ Compiler For Ryzen
+http://phoronix.com/scan.php?page=news_item&px=AMD-AOCC-1.0-Released
+
+/r/machinelearning-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+[N] Facebook releases code for its fast ConvNet machine translation model
+https://techcrunch.com/2017/05/09/facebook-posts-its-fast-and-accurate-convnet-models-for-machine-translation-on-github/
+Picasso: A free open-source visualizer for CNNs [P]
+https://medium.com/merantix/picasso-a-free-open-source-visualizer-for-cnns-d8ed3a35cfc5
+
+/r/python-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Python for Scientists and Engineers is Now Free to Read Online
+https://www.reddit.com/r/Python/comments/6bat6d/python_for_scientists_and_engineers_is_now_free/
+Machine Learning Explained with GIFs
+https://dashee87.github.io/data%20science/general/Clustering-with-Scikit-with-GIFs/
+
+/r/rust-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Achieving warp speed with Rust
+https://gist.github.com/jFransham/369a86eff00e5f280ed25121454acec1
+Two years of Rust
+https://blog.rust-lang.org/2017/05/15/rust-at-two-years.html
+
+/r/programming-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Due to a change in how they report data usage, our monthly costs for Firebase, a SaaS provided by Google, has increased from $25 a month to ~$2,000
+https://medium.com/@contact_16315/firebase-costs-increased-by-7-000-81dc0a27271d
+Using Python to find the longest word spellable with symbols from the periodic table.
+https://www.amin.space/blog/2017/5/elemental_speller/
+
+/r/chomsky-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Chomsky humorously criticizes Glenn Greenwald's tie choice
+https://i.imgur.com/tOyy9b1.png
+Noam Chomsky: The Most Remarkable Thing About 2016 Election Was Bernie Sanders, Not Trump (Video)
+http://www.truthdig.com/avbooth/item/noam_chomsky_most_remarkable_thing_last_election_bernie_sanders_20170515
+
+/r/economics-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+We need to challenge the myth that the rich are specially-talented wealth creators
+http://blogs.lse.ac.uk/politicsandpolicy/we-need-to-challenge-the-myth-that-the-rich-are-specially-talented-wealth-creators/?utm_content=bufferf584f.com
+Trump Plan to Slash LLC Rate Is Boon for Top Earners: Cutting pass-through rate to 15% could cost $2 trillion; Top 1% would get tax cut of $76,000 - Tax Policy Center
+https://www.bloomberg.com/news/articles/2017-05-15/trump-plan-to-slash-llc-rate-is-boon-for-top-earners-study-says
+
+/r/news-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Trump revealed highly classified information to Russian foreign minister and ambassador
+http://wapo.st/2pPSCIo
+Cable lobby conducts survey, finds that Americans want net neutrality
+https://arstechnica.com/?post_type=post&p=1095139
+
