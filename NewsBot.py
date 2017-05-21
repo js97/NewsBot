@@ -4,8 +4,9 @@ import sched
 import datetime
 import smtplib
 from email.mime.text import MIMEText
+import DBA as db
 
-def getSubmissions():
+def get_submissions():
 
 	reddit_instance = praw.Reddit('bot1')
 
@@ -24,9 +25,10 @@ def getSubmissions():
 	subs.append('machinelearning')
 	subs.append(reddit_instance.subreddit('news'))
 	subs.append('news')
+	
 	return subs
 
-def createFile(sub_list):
+def create_file(sub_list):
 	with open('file.txt','w') as f:
 		while len(sub_list) is not 0:
 			f.write('/r/')
@@ -42,18 +44,18 @@ def createFile(sub_list):
 			f.write('\n')
 
 
-def sendEmail(sub_list):
+def send_email(sub_list, to_this_email):
 	
-	createFile(sub_list)
+	create_file(sub_list)
 	with open('file.txt') as f:
 		msg = MIMEText(f.read())
 
-	email = ''
+	email = 'joshua.steubs@gmail.com'
 	password = ''
 
 	msg['Subject'] = 'Reddit Weekly Update'
-	msg['From'] = 'email'
-	msg['To'] = 'email'
+	msg['From'] = email
+	msg['To'] = to_this_email
 	msg_ = msg.as_string()
 
 	server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -68,9 +70,15 @@ def main():
 	
 	DayOfWeek = datetime.datetime.today().weekday()
 	print('Waiting...\n')
-	if DayOfWeek == 6:
-		sendEmail(getSubmissions())
+	#if DayOfWeek == 6:
+	email_list = db.get_emails()
+
+	print (email_list)
+	for email in email_list:
+		send_email(get_submissions(), email)
 	
 if __name__ == '__main__':
-	while 1:
-		main()
+	#while 1:
+	main()
+
+	
