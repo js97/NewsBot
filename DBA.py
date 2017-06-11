@@ -45,10 +45,5 @@ def get_emails():
 create_table()
 #data_entry()	
 get_emails()
-val = 0
-for i in range(2):
-	#dynamic_data_entry()
-	#time.sleep(1)
-	print(val)
-	val = val+1
+
 

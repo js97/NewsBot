@@ -6,6 +6,11 @@ import smtplib
 from email.mime.text import MIMEText
 import DBA as db
 
+
+DayOfWeek = datetime.datetime.today().weekday()
+HourOfDay = datetime.datetime.today().hour
+MinOfHour = datetime.datetime.today().minute
+
 def get_submissions():
 
 	reddit_instance = praw.Reddit('bot1')
@@ -67,10 +72,9 @@ def send_email(sub_list, to_this_email):
 	server.quit()	
 
 def main():
-	
-	DayOfWeek = datetime.datetime.today().weekday()
+
 	print('Waiting...\n')
-	#if DayOfWeek == 6:
+	
 	email_list = db.get_emails()
 
 	print (email_list)
@@ -78,7 +82,10 @@ def main():
 		send_email(get_submissions(), email)
 	
 if __name__ == '__main__':
-	#while 1:
-	main()
+	while 1:
+		time.sleep(58)
+		if DayOfWeek == 6 and HourOfDay == 8 and MinOfHour == 1:
+			main()
+			time.sleep(100)
 
 	
