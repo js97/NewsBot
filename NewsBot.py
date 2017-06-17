@@ -7,10 +7,6 @@ from email.mime.text import MIMEText
 import DBA as db
 
 
-DayOfWeek = datetime.datetime.today().weekday()
-HourOfDay = datetime.datetime.today().hour
-MinOfHour = datetime.datetime.today().minute
-
 def get_submissions():
 
 	reddit_instance = praw.Reddit('bot1')
@@ -72,9 +68,12 @@ def send_email(sub_list, to_this_email):
 	server.quit()	
 
 def main():
-
-	print('Waiting...\n')
 	
+	DayOfWeek = datetime.datetime.today().weekday()
+	HourOfDay = datetime.datetime.today().hour
+	MinOfHour = datetime.datetime.today().minute
+	
+	print('Waiting...\n')
 	email_list = db.get_emails()
 
 	print (email_list)
