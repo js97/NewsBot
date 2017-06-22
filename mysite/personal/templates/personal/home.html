@@ -2,22 +2,24 @@
 
 {% block content %}
 
+
 {% include "personal/includes/topsnippet.html"%}
 
 
-<form class="form-horizontal">
-  <div class="form-group form-group-lg">
-    <label class="col-sm-2 control-label" for="formGroupInputLarge"></label>
-   <div class="col-xs-6">
-      <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Email">
-    </div>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
   </div>
+  <button type="submit" class="btn btn-primary btn-block">Add Subreddits</button>
 </form>
+
+
 {% include "personal/includes/midsnippet.html"%}
 
 <div class="input-group">
   <span class="input-group-addon" id="basic-addon1">/r/</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
 </div>
 
 {% endblock %}	
